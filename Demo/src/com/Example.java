@@ -9,7 +9,6 @@ import java.util.stream.Collectors;
 public class Example {
     public static void main(String[] args) {
 
-//        System.out.println(getMaxColors(Arrays.asList(10,10,10), 5));
     }
 
     public static int getMaxColors(List<Integer> prices, int money) {
@@ -44,9 +43,5 @@ public class Example {
     }
 
 
-}
-
-interface Tower{
-    boolean isTooHigh(int height, int limit);
 }
 

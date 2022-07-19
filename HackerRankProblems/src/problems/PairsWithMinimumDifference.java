@@ -7,6 +7,10 @@ public class PairsWithMinimumDifference {
 
     public static void main(String args[]) {
         List<Integer> numbers = Arrays.asList(4,-2,-1,3);
+        minimumDifference(numbers);
+    }
+
+    public static int minimumDifference(List<Integer> numbers) {
         int n = numbers.size();
         List<Integer> sortedList = numbers.stream().sorted().collect(Collectors.toList());
         int minAbs = Integer.MAX_VALUE;
@@ -38,6 +42,7 @@ public class PairsWithMinimumDifference {
         for(String s: pairMap.get(minAbs)){
             System.out.println(s);
         }
+        return 0;
     }
 
 
