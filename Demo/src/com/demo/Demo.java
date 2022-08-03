@@ -58,8 +58,7 @@ public class Demo {
                 count++;
             }
         }
-
-
+        return 0;
     }
 
     public static int solution1(int[] A) {
