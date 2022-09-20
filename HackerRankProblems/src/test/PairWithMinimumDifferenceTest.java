@@ -1,8 +1,7 @@
 package test;
 
 import org.junit.Test;
-import org.mockito.Mockito;
-import problems.PairsWithMinimumDifference;
+import main.problems.PairsWithMinimumDifference;
 
 import java.util.Arrays;
 

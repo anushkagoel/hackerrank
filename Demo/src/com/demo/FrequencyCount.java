@@ -1,6 +1,9 @@
 package com.demo;
 
 import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -24,6 +27,22 @@ public class FrequencyCount {
         Integer frequestElement = frequencyInteger.entrySet().stream().max(Map.Entry.comparingByValue()).map(e-> e.getKey()).get();
         System.out.println(frequencyInteger.entrySet());
 
+
+    }
+
+    private static String find_embedded_word(List<String> words, String s) {
+
+//        List<String> words1 = Arrays.asList("cat", "baby", "dog", "bird", "car");
+        List<Character> frequency = s.chars().mapToObj(c-> (char) c).collect(Collectors.toList());
+        //   Function.identity(), Collectors.summingInt(i -> 1)));
+        for(String word: words) {
+            List<Character> letters = word.chars().mapToObj(c-> (char) c).collect(Collectors.toList());
+            if(frequency.containsAll(letters)) {
+                return word;
+            }
+        }
+
+        return null;
 
     }
 }
